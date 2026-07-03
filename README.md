@@ -46,26 +46,9 @@ ifood-case/
 
 As premissas completas estão na última célula do notebook 1.
 
-## Como executar
 
-### 1. Pré-requisitos
 
-- Python 3.11 ou superior
-- Java 8, 11 ou 17 (exigido pelo PySpark; verifique com `java -version`)
-
-### 2. Dados
-
-Baixe e extraia [ds-technical-evaluation-data.tar.gz](https://data-architect-test-source.s3.sa-east-1.amazonaws.com/ds-technical-evaluation-data.tar.gz) e coloque `offers.json`, `profile.json` e `transactions.json` em `data/raw/`.
-
-### 3. Ambiente
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate        # Windows (Linux/Mac: source .venv/bin/activate)
-pip install -r requirements.txt
-```
-
-### 4. Notebooks (na ordem)
+### 1. Notebooks (na ordem)
 
 Execute `notebooks/1_data_processing.ipynb` e depois `notebooks/2_modeling.ipynb` no Jupyter ou VS Code, ou pela linha de comando:
 
@@ -76,7 +59,7 @@ python -m nbconvert --to notebook --execute --inplace notebooks/2_modeling.ipynb
 
 O notebook 1 cria a sessão Spark local automaticamente e grava as saídas em `data/processed/`. No Databricks Community Edition, importe os notebooks e ajuste apenas os caminhos para o DBFS.
 
-### 5. Dashboard
+### 2. Dashboard
 
 ```bash
 streamlit run dashboard/app.py
